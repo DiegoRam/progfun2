@@ -1,6 +1,6 @@
 package example
 
-import scala.NoSuchElementException
+import java.util.NoSuchElementException
 
 
 object Lists {
@@ -25,10 +25,7 @@ object Lists {
    * @param xs A list of natural numbers
    * @return The sum of all elements in `xs`
    */
-    def sum(xs: List[Int]): Int = xs match {
-    case Nil => 0
-    case h :: t => h + sum(t)
-  }
+    def sum(xs: List[Int]): Int = xs sum
   
   /**
    * This method returns the largest element in a list of integers. If the
@@ -43,14 +40,5 @@ object Lists {
    * @return The largest element in `xs`
    * @throws java.util.NoSuchElementException if `xs` is an empty list
    */
-    def max(xs: List[Int]): Int = {
-      def go(ys: List[Int], max: Int): Int = {
-        if(ys.isEmpty) max
-        else {
-          if(ys.head > max) go(ys.tail, ys.head)
-          else go(ys.tail, max)
-        }
-      }
-      go(xs, 0)
-  }
+    def max(xs: List[Int]): Int = if(xs.isEmpty) throw new NoSuchElementException else xs max
   }
