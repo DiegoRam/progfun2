@@ -95,6 +95,11 @@ trait GameDef {
    */
   def startBlock: Block = Block(startPos, startPos)
 
+  /**
+    * This function returns the block at the goal position of
+    * the game.
+    */
+  def finishBlock: Block = Block(goal, goal)
 
   /**
    * A block is represented by the position of the two cubes that
@@ -139,6 +144,12 @@ trait GameDef {
                else if (b1.x == b2.x)  dx(1, 1)
                else                    dx(2, 1)
 
+    def move(m: Move) = m match {
+      case Left => left
+      case Right => right
+      case Up => up
+      case Down => down
+    }
 
     /**
      * Returns the list of blocks that can be obtained by moving
