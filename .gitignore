@@ -2,7 +2,7 @@
 example/target/*
 example/project/target/*
 *.iml
-*/.idea/*
+*.idea/
 
 # Created by https://www.gitignore.io/api/intellij,scala
 
@@ -77,3 +77,9 @@ project/plugins/project/
 # Scala-IDE specific
 .scala_dependencies
 .worksheet
+.idea/
+calculator/
+quickcheck/.idea/
+quickcheck/project/project/
+streams/.idea/
+streams/project/project/
