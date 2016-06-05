@@ -2,7 +2,7 @@
 example/target/*
 example/project/target/*
 *.iml
-*.idea/
+*.idea/*
 
 # Created by https://www.gitignore.io/api/intellij,scala
 
